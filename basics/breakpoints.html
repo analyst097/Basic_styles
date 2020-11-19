@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS breakpoints</title>
+    <style>
+        div{
+            display: none;
+        }
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            
+            .xs{
+                display: block;
+            }
+            
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            .sm{
+                display: block;
+            }
+            .xs{
+                display: none;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            .md{
+                display: block;
+            } 
+            .xs{
+                display: none;
+            }
+            .sm{
+                display: none;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            .lg{
+                display: block;
+            }
+            .xs{
+                display: none;
+            }
+            .sm{
+                display: none;
+            }
+            .md{
+                display: none;
+            } 
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            .xl{
+                display: block;
+            }
+            .xs{
+                display: none;
+            }
+            .sm{
+                display: none;
+            }
+            .md{
+                display: none;
+            } 
+            .lg{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="xs">Extra small</div>
+    <div class="sm">Small</div>
+    <div class="md">Medium</div>
+    <div class="lg">Large</div>
+    <div class="xl">Extra large</div>
+</body>
+</html>

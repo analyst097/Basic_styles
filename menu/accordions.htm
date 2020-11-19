@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        .container, .accords{
+            padding: 20px;
+        }
+        .p{
+            display: none;
+        }
+
+        button{
+            display: block;
+            width: 100%;
+            text-align: left;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .active{
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="accords">
+            <button onclick="show('con1',this)" class="tablink">Tab 1</button>
+            <div id="con1" class="p">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati minus sed numquam tempora, ad nesciunt ipsum, molestias hic nostrum maiores, ratione reiciendis fugit at enim laboriosam? A placeat eaque consequatur.</div>
+            <button onclick="show('con2',this)" class="tablink">Tab 2</button>
+            <div id="con2" class="p">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati minus sed numquam tempora, ad nesciunt ipsum, molestias hic nostrum maiores, ratione reiciendis fugit at enim laboriosam? A placeat eaque consequatur.</div>
+            <button onclick="show('con3',this)" class="tablink">Tab 3</button>
+            <div id="con3" class="p">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati minus sed numquam tempora, ad nesciunt ipsum, molestias hic nostrum maiores, ratione reiciendis fugit at enim laboriosam? A placeat eaque consequatur.</div>
+        </div>
+    </div>
+
+    <script>
+        function show(id,x){
+    
+            console.log(id);
+            x.classList.toggle("active");
+            if(x.classList.contains("active")){
+                document.getElementById(id).style.display = "block";
+            }
+            else{
+                document.getElementById(id).style.display = "none";
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

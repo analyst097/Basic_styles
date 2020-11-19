@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu icon</title>
+    <style>
+        .menu-icon, .menu-btn{
+            padding: 5px 10px 10px 10px;      
+            margin-bottom: 30px;      
+        }
+        .bar{
+            height: 4px;
+            width: 30px;
+            background-color: #000;
+            margin-top: 5px;
+            transition: all .3s ease;
+        }
+   
+        .change .bar1{
+            transform: rotate(-45deg) translate(-2px,10px);
+        }
+        .change .bar2 {
+            opacity: 0;
+        }
+        .change .bar3{
+            transform: rotate(45deg) translate(-2px,-10px);
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <button class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+    
+        <div class="menu-icon" onclick="menu(this)">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
+    </div>
+
+    <script>
+        function menu(x){
+            x.classList.toggle('change');
+        }
+    </script>
+</body>
+</html>

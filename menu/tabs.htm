@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        .container, .tabs, .contents{
+            padding: 20px;
+        }
+        .p{
+            display: none;
+        }
+
+        .tablink:hover{
+            background-color: #ccc;
+        }
+        .active{
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="tabs">
+            <button onclick="show(event, 'con1')" class="tablink">Tab 1</button>
+            <button onclick="show(event, 'con2')" class="tablink">Tab 2</button>
+            <button onclick="show(event, 'con3')" class="tablink">Tab 3</button>
+        </div>
+        <div class="contents">
+            <div id="con1" class="p">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati minus sed numquam tempora, ad nesciunt ipsum, molestias hic nostrum maiores, ratione reiciendis fugit at enim laboriosam? A placeat eaque consequatur.</div>
+            <div id="con2" class="p">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati minus sed numquam tempora, ad nesciunt ipsum, molestias hic nostrum maiores, ratione reiciendis fugit at enim laboriosam? A placeat eaque consequatur.</div>
+            <div id="con3" class="p">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati minus sed numquam tempora, ad nesciunt ipsum, molestias hic nostrum maiores, ratione reiciendis fugit at enim laboriosam? A placeat eaque consequatur.</div>
+        </div>
+    </div>
+
+    <script>
+        function show(event, id){
+            var i, contents, links;
+            console.log(id);
+
+            contents = document.getElementsByClassName('p');
+            for(i=0;i<contents.length;i++){
+                    contents[i].style.display = "none";
+            }
+
+            links = document.getElementsByClassName('tablink');
+            for(i=0; i<links.length;i++){
+                links[i].className = links[i].className.replace(" active", "");
+            }
+
+            document.getElementById(id).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

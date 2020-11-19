@@ -1,0 +1,47 @@
+/*
+
+syntax : 
+
+@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+    CSS-Code;
+  }
+The @media rule is used in media queries to apply different styles for different media types/devices.
+
+Media queries can be used to check many things, such as:
+
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        background-color: #879;
+        }
+
+    @media only screen and (max-width: 600px) {
+        body {
+            background-color: lightblue;
+        }
+        p{
+            display: none;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+    <h1>The @media Rule</h1>
+
+    <p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is "lightblue", otherwise it is "yellow".</p>
+
+</body>
+</html>
